@@ -1,138 +1,201 @@
-
-body{
-    margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #fef8f8;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #fef8f8;
 }
 
-#libraryTable{
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+#libraryTable {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-table{
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(244, 194, 194, 0.2);
-    border-radius: 12px;
-    overflow: hidden;
-} 
-
-th {
-    background-color: #f4c2c2; 
-    color: #3c2f2f; 
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 16px;
-    font-size: 14px;
-    text-align: left;
+#newBookBtn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #f4c2c2;
+  color: #3c2f2f;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-td {
-    padding: 16px;
-    font-size: 15px;
-    color: #3c2f2f; 
-    border-bottom: 1px solid #fce4e4; 
+#newBookBtn:hover {
+  background-color: #d98695;
 }
 
-tr:hover {
-    background-color: #ffebeb; 
-    transition: background-color 0.2s ease;
+/* Dialog Styling */
+dialog {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(244, 194, 194, 0.2);
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 90%;
 }
 
-td:last-child {
-    font-weight: 500;
-    color: #d98695; /* Slightly darker blush pink for "Yes" */
+dialog h2 {
+  font-size: 20px;
+  color: #3c2f2f;
+  margin: 0 0 15px;
+  text-align: center;
 }
 
-td:last-child:where(:not(:has(span))) {
-    color: #e8a3a3; /* Lighter blush pink for "No" */
-}
-
-.add-book-section {
-    margin-bottom: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(244, 194, 194, 0.2);
-    padding: 20px;
-}
-
-.add-book-section h2 {
-    font-size: 20px;
-    color: #3c2f2f;
-    margin: 0 0 15px;
-    text-align: center;
-}
-
-.add-book-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+/* Form Styling */
+form {
+  display: grid;
+  gap: 15px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    font-weight: 600;
-    color: #3c2f2f;
-    margin-bottom: 5px;
+  font-weight: 600;
+  color: #3c2f2f;
+  margin-bottom: 5px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="number"] {
-    padding: 10px;
-    border: 1px solid #fce4e4;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #3c2f2f;
-    background-color: #fff7f7;
+  padding: 10px;
+  border: 1px solid #fce4e4;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #3c2f2f;
+  background-color: #fff7f7;
 }
 
 .form-group input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: #d98695;
+  width: 20px;
+  height: 20px;
+  accent-color: #d98695;
 }
 
-.add-book-form button {
-    grid-column: span 2;
-    padding: 12px;
-    background-color: #f4c2c2;
-    color: #3c2f2f;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+form button[type="submit"] {
+  padding: 12px;
+  background-color: #f4c2c2;
+  color: #3c2f2f;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.add-book-form button:hover {
-    background-color: #d98695;
+form button[type="submit"]:hover {
+  background-color: #d98695;
 }
 
-/* Responsive design */
+#cancelBtn {
+  padding: 12px;
+  background-color: #e8a3a3;
+  color: #3c2f2f;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#cancelBtn:hover {
+  background-color: #c87e8e;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(244, 194, 194, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+th {
+  background-color: #f4c2c2;
+  color: #3c2f2f;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 16px;
+  font-size: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 16px;
+  font-size: 15px;
+  color: #3c2f2f;
+  border-bottom: 1px solid #fce4e4;
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  background-color: #ffebeb;
+  transition: background-color 0.2s ease;
+}
+
+/* Read Column (3rd Column) */
+td:nth-child(3) {
+  font-weight: 500;
+  color: #d98695;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn {
+  background-color: #e8a3a3;
+  color: #3c2f2f;
+}
+
+.remove-btn:hover {
+  background-color: #c87e8e;
+}
+
+.toggle-btn {
+  background-color: #f4c2c2;
+  color: #3c2f2f;
+}
+
+.toggle-btn:hover {
+  background-color: #d98695;
+}
+
+/* Hidden Column */
+.hidden-id {
+  display: none;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    table {
-        font-size: 14px;
-    }
-    th, td {
-        padding: 12px;
-    }
-    .add-book-form {
-        grid-template-columns: 1fr;
-    }
-    .add-book-form button {
-        grid-column: span 1;
-    }
-}
+  table {
+    font-size: 14px;
+  }
 
-table, th, td {
-    transition: all 0.3s ease;
+  th,
+  td {
+    padding: 12px;
+  }
+
+  dialog {
+    width: 95%;
+  }
 }
