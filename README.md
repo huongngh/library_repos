@@ -1,9 +1,21 @@
 # library_repos
-A lightweight JavaScript library that manages a book collection in the browser. Stores books in an array with unique IDs, displays them as table, and lets you add, remove, and toggle read status. Built with HTML, CSS, and vanilla JS.
+# Book Library Manager  
 
-Key Features:
+A lightweight JavaScript library for managing book collections in the browser.  
 
-Add books via form
-Display as a table
-Remove books or mark as read/unread
+## Features  
+- 📖 Add books via interactive form  
+- 🏷️ Displays books in a clean table format  
+- 🗑️ Remove books with one click  
+- ✅ Toggle read/unread status  
+- 🆔 Automatic unique ID generation  
 
+## Tech Stack  
+- Vanilla JavaScript  
+- HTML5  
+- CSS3  
+
+## How to Use  
+1. Clone the repository  
+2. Open `index.html` in your browser  
+3. Start managing your book collection!  
